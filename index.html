@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@0;1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -22,40 +22,51 @@
     <!-- Header -->
     <header class="header">
       <div class="container header__container">
-        <a href="#" class="header__logo"
-          ><img src="imgs/markant-logo.png" alt="logo" width="240" height="55"
-        /></a>
+        <!-- Header Logo -->
+        <div class="header__left">
+          <a href="#" class="header__logo"
+            ><img
+              src="imgs/markant-logo.png"
+              alt="logo"
+              width="240"
+              height="55"
+          /></a>
+        </div>
+        <!-- Header Menu -->
         <div class="header__right">
           <div class="header__right-top">
-            <button class="icon__search">
+            <button class="icon__search" title="Search">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
             <ul class="language-menu__list">
-              <li class="language-menu__listItem">
+              <li class="language-menu__listItem active language-active">
                 <a href="#"><span>KR</span></a>
               </li>
               <li class="language-menu__listItem">
                 <a href="#"><span>EN</span></a>
               </li>
             </ul>
+            <div class="language-menu__toggle">
+              <i class="fa-sharp fa-solid fa-angle-down"></i>
+            </div>
+            <a href="https://markant.net/" class="header__link" target="_blank"
+              >markant.net</a
+            >
           </div>
-          <div class="language-menu__toggle"></div>
-          <a href="https://markant.net/" class="header__link" target="_blank"
-            >markant.net</a
-          >
+
+          <div class="header__right-bottom"></div>
+          <nav class="nav active">
+            <div class="nav__link nave__link--parent" data-index="0">
+              <span class="nav__linktext">Our Services</span>
+            </div>
+            <div class="nav__link nave__link--parent" data-index="1">
+              <span class="nav__linktext">Markant for...</span>
+            </div>
+            <div class="nav__link nave__link--parent" data-index="2">
+              <span class="nav__linktext">About Us</span>
+            </div>
+          </nav>
         </div>
-        <div class="header__right-bottom"></div>
-        <nav class="nav nav--level active">
-          <div class="nav__link nave__link--parent" data-index="0">
-            <span class="nav__linktext">Our Services</span>
-          </div>
-          <div class="nav__link nave__link--parent" data-index="1">
-            <span class="nav__linktext">Markant for...</span>
-          </div>
-          <div class="nav__link nave__link--parent" data-index="2">
-            <span class="nav__linktext">About Us</span>
-          </div>
-        </nav>
       </div>
     </header>
 
@@ -66,21 +77,22 @@
       </nav>
 
       <div class="textmedia">
-        <header>
-          <h1 class="textmedia__header">Make it markant</h1>
-        </header>
-        <div class="textmedia__item textmedia__gallery">
-          <img src="imgs/zentralregulierung-positiv.png" alt="" width="500" />
-        </div>
-        <div class="textmedia__item textmedia__text">
-          <p>
-            We are the partner that suppliers and retailers can count on. Our
-            progressive, comprehensive solutions throughout your entire value
-            chain help you to take your business units to the next level. We
-            optimise your processes and payment systems, provide you with data,
-            improve your planning security and take the burden off. This allows
-            you to focus on the important things, such as achieving your goals.
-          </p>
+        <h1 class="textmedia__header">Make it markant</h1>
+        <div class="textmedia__main">
+          <div class="textmedia__item textmedia__gallery">
+            <img src="imgs/zentralregulierung-positiv.png" />
+          </div>
+          <div class="textmedia__item textmedia__text">
+            <p>
+              We are the partner that suppliers and retailers can count on. Our
+              progressive, comprehensive solutions throughout your entire value
+              chain help you to take your business units to the next level. We
+              optimise your processes and payment systems, provide you with
+              data, improve your planning security and take the burden off. This
+              allows you to focus on the important things, such as achieving
+              your goals.
+            </p>
+          </div>
         </div>
       </div>
     </main>
@@ -88,7 +100,7 @@
     <!-- footer -->
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer__row row">
+        <div class="nav-footer__row">
           <div class="nav-footer__wrapper">
             <p class="nav-footer__title">Markant Group</p>
             <nav class="nav-footer">
@@ -115,7 +127,7 @@
             </nav>
           </div>
           <div class="nav-footer__wrapper">
-            <p class="nav.footer__title">Service</p>
+            <p class="nav-footer__title">Service</p>
             <nav class="nav-footer">
               <a
                 class="nav-footer__item"
@@ -132,7 +144,7 @@
             </nav>
           </div>
           <div class="nav-footer__wrapper">
-            <p class="nav-foote__title">Markant in the web</p>
+            <p class="nav-footer__title">Markant in the web</p>
             <nav class="nav-footer">
               <a class="nav-footer__item" href="https://markant.net/"
                 >markant.net</a
@@ -149,7 +161,7 @@
             </nav>
           </div>
         </div>
-        <div class="footer__row row space-between">
+        <div class="nav-meta-footer__row">
           <div class="nav-meta__wrapper">
             <nav class="nav-meta">
               <a class="nav-meta__item" href="/en/legal-notice">Legal notice</a>
@@ -164,11 +176,12 @@
               >
             </nav>
           </div>
-          <img
-            src="imgs/make_it_markant_ENG_RGB_1000px.png"
-            class="footer__logo"
-            alt="mach es markant"
-          />
+          <div class="footer__logo">
+            <img
+              src="imgs/make_it_markant_ENG_RGB_1000px.png"
+              alt="mach es markant"
+            />
+          </div>
         </div>
       </div>
     </footer>
