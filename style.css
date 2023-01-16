@@ -168,6 +168,52 @@ h1 {
   font-weight: 700;
 }
 
+.nav__linktext:hover {
+  cursor: pointer;
+}
+
+.nav__drop {
+  position: relative;
+  background-color: var(--color-red);
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  line-height: 2.5;
+  color: var(--color-white);
+  display: none;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.active {
+  display: block;
+  height: 350px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+  height: px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.nav__drop-column {
+  padding-top: 50px;
+  padding-right: 200px;
+}
+
+.nav__drop__menu {
+  width: 100%;
+  color: var(--color-white);
+  font-size: var(--font-medium);
+}
+
 .textmedia {
   margin-top: 230px;
   display: flex;
