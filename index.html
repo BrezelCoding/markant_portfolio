@@ -26,7 +26,7 @@
       <div class="header__container">
         <!-- Header Logo -->
         <div class="header__left">
-          <a href="#" class="header__logo"
+          <a href="index.html" class="header__logo"
             ><img
               src="imgs/markant-logo.png"
               alt="logo"
@@ -41,16 +41,16 @@
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
             <ul class="language-menu__list">
-              <li class="language-menu__listItem active language-active">
-                <a href="#"><span>KR</span></a>
+              <li class="language-menu__list">
+                <a href="#"
+                  ><span>KR </span
+                  ><i class="fa-sharp fa-solid fa-angle-down"></i
+                ></a>
               </li>
               <li class="language-menu__listItem">
                 <a href="#"><span>EN</span></a>
               </li>
             </ul>
-            <div class="language-menu__toggle">
-              <i class="fa-sharp fa-solid fa-angle-down"></i>
-            </div>
             <a href="https://markant.net/" class="header__link" target="_blank"
               >markant.net</a
             >
@@ -192,9 +192,7 @@
 
     <!-- main -->
     <main class="content">
-      <nav class="breadcrumb-section">
-        <div class="container"></div>
-      </nav>
+      <div class="container"></div>
 
       <div class="textmedia">
         <h1 class="textmedia__header">Make it markant</h1>
@@ -216,6 +214,45 @@
         </div>
       </div>
     </main>
+
+    <!-- counter -->
+    <div class="figures__frame">
+      <h2 class="figures__headline">
+        Together for more advantages and planning security
+      </h2>
+      <ul class="figures__content">
+        <li class="figures__item">
+          <div class="figures__item--figure" data-counter="15000">0</div>
+          <p class="figure__item--text">suppliers</p>
+        </li>
+        <li class="figures__item">
+          <div class="figures__item--figure" data-counter="200">0</div>
+          <p class="figure__item--text">retailers</p>
+        </li>
+        <li class="figures__item">
+          <div class="figures__item--figure" data-counter="11">0</div>
+          <p class="figure__item--text">locations worldwide</p>
+        </li>
+      </ul>
+      <ul class="figures__content">
+        <li class="figures__item">
+          <div class="figures__item--figure" data-counter="135">0</div>
+          <p class="figure__item--text">
+            billion revenue Markant trading partners
+          </p>
+        </li>
+        <li class="figures__item">
+          <div class="figures__item--figure" data-counter="1200">0</div>
+          <p class="figure__item--text">employees</p>
+        </li>
+        <li class="figures__item">
+          <div class="figures__item--figure" data-counter="58">0</div>
+          <p class="figure__item--text">
+            billion Markant revenue from franchise operations
+          </p>
+        </li>
+      </ul>
+    </div>
 
     <!-- footer -->
     <footer class="footer">
@@ -305,6 +342,12 @@
         </div>
       </div>
     </footer>
+
+    <!-- arrow up -->
+    <button class="arrow-up">
+      <i class="fa-solid fa-circle-arrow-up"></i>
+    </button>
+
     <script src="main.js" defer></script>
   </body>
 </html>
