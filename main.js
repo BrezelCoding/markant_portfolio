@@ -16,25 +16,35 @@ function navDropRemove(event) {
 }
 
 /* Counter */
+const counterElements = document.querySelectorAll('.figures__item--figure');
+const speed = 50; // the lower the slower
 
-// Selector
-const counters = document.querySelectorAll('.figures__item--figure');
-// Main function
-for (let n of counters) {
-  const updateCount = () => {
-    const target = +n.getAttribute('data-counter');
-    const count = +n.innerText;
-    const speed = 100; // animation speed
-    const inc = target / speed;
-    if (count < target) {
-      n.innerText = Math.ceil(count + inc);
-      setTimeout(updateCount, 1);
-    } else {
-      n.innerText = target;
+function counter(target, start, stop) {
+  target.innerText = 0.1;
+  const counterInterval = setInterval(() => {
+    const inc = Number(stop / speed);
+    start += inc;
+    const valueConverted = (Math.round(start * 100) / 100).toFixed(0);
+    target.innerText = valueConverted;
+    if (valueConverted == stop) {
+      clearInterval(counterInterval);
     }
-  };
-  updateCount();
+  }, 30);
 }
+
+function obCallBack(entries) {
+  entries.forEach((entry) => {
+    const { target } = entry;
+    const stopValue = target.innerText;
+    const startValue = 0;
+    if (!entry.isIntersecting) return;
+    counter(target, startValue, stopValue);
+    counterObserver.unobserve(target);
+  });
+}
+
+const counterObserver = new IntersectionObserver(obCallBack, { threshold: 1 });
+counterElements.forEach((counterElem) => counterObserver.observe(counterElem));
 
 /* Shoe 'arrow up' button when scrolling down */
 const home = document.querySelector('.header');
