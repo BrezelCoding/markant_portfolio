@@ -292,6 +292,37 @@ h1 {
   line-height: 1.7;
 }
 
+.content.main2nd {
+  margin-top: -150px;
+}
+
+.textmedia__gallery.main2nd {
+  width: 50%;
+  margin-top: -200px;
+}
+
+.textmedia__text.main2nd {
+  width: 50%;
+}
+
+.a__link {
+  color: var(--color-red);
+  font-size: var(--font-small);
+  font-weight: var(--weight-bold);
+}
+
+.btn__link {
+  color: var(--color-red);
+  font-size: var(--font-small);
+  font-weight: var(--weight-bold);
+}
+
+.a__link,
+.btn__link:hover {
+  transform: translateX(50%);
+  transition: all 0.3s ease;
+}
+
 /* figure counter */
 
 .figures__frame {

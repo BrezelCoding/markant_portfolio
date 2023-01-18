@@ -46,8 +46,8 @@ function obCallBack(entries) {
 const counterObserver = new IntersectionObserver(obCallBack, { threshold: 1 });
 counterElements.forEach((counterElem) => counterObserver.observe(counterElem));
 
-/* Shoe 'arrow up' button when scrolling down */
-const home = document.querySelector('.header');
+/* Show 'arrow up' button when scrolling down */
+const home = document.querySelector('.header__container');
 const homeHeight = home.getBoundingClientRect().height;
 const arrowUp = document.querySelector('.arrow-up');
 document.addEventListener('scroll', () => {
@@ -57,3 +57,13 @@ document.addEventListener('scroll', () => {
     arrowUp.classList.remove('visible');
   }
 });
+
+/* Handle click on the 'arrow up' button */
+arrowUp.addEventListener('click', () => {
+  scrollIntoView('.content');
+});
+
+function scrollIntoView(seclector) {
+  const scrollTo = document.querySelector(seclector);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
+}
