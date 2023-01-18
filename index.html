@@ -21,8 +21,8 @@
     <title>Markant</title>
   </head>
   <body>
-    <!-- Header -->
-    <header class="header">
+    <!-- Header Desktop-->
+    <header class="header desktop">
       <div class="header__container">
         <!-- Header Logo -->
         <div class="header__left">
@@ -190,6 +190,194 @@
       </div>
     </header>
 
+    <!-- Header mobile -->
+    <header class="header mobile">
+      <div class="header__container mobile">
+        <!-- Header Logo -->
+        <div class="header__left">
+          <a href="index.html" class="header__logo"
+            ><img
+              src="imgs/markant-logo.png"
+              alt="logo"
+              width="240"
+              height="55"
+          /></a>
+        </div>
+        <!-- Header Menu -->
+        <div class="header__right mobile">
+          <button class="icon__search header__mobile" title="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <button class="toggle__btn" data-mIndex="mobile">
+            <i class="fa-solid fa-bars" data-mIndex="mobile"></i
+            ><span toggle__menu data-mIndex="mobile">Menu</span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="mobile__drop invisible" data-mType="mobile">
+        <button class="x__icon"><i class="fa-solid fa-x fa-3x"></i></button>
+        <!-- our service -->
+        <div>
+          <span
+            class="nav__linktext mobile__nav__link"
+            data-mType="our__service"
+          >
+            Our Services
+          </span>
+        </div>
+        <!-- mobile drop : our service-->
+        <div class="nav__link2" data-drop="our__service">
+          <div class="container">
+            <ul class="nav__drop-column">
+              <li class="nav__drop__menu">
+                <a href="#"
+                  ><span class="nav__drop__menu"
+                    >The Markant system for success</span
+                  ></a
+                >
+              </li>
+              <li class="nav__drop__menu">
+                <a href="#"
+                  ><span class="nav__drop__menu">Finance & Security</span></a
+                >
+              </li>
+              <li class="nav__drop__menu">
+                <a href="#"
+                  ><span class="nav__drop__menu"
+                    >Market & Price Analysis</span
+                  ></a
+                >
+              </li>
+              <li class="nav__drop__menu">
+                <a href="#"><span class="nav__drop__menu">Wholesale</span></a>
+              </li>
+            </ul>
+            <ul class="nav__drop-column">
+              <li class="nav__drop__menu">
+                <a href="#"
+                  ><span class="nav__drop__menu">Payent Services</span></a
+                >
+              </li>
+              <li class="nav__drop__menu">
+                <a href="#"
+                  ><span class="nav__drop__menu">Product Information</span></a
+                >
+              </li>
+              <li class="nav__drop__menu">
+                <a href="#"
+                  ><span class="nav__drop__menu">B2B Integration</span></a
+                >
+              </li>
+              <li class="nav__drop__menu">
+                <a href="#"
+                  ><span class="nav__drop__menu"
+                    >Partner Networks & Forums</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- markant for -->
+        <div>
+          <span
+            class="nav__linktext mobile__nav__link"
+            data-mType="markant__for"
+          >
+            Markant for...
+          </span>
+        </div>
+        <!-- mobile drop : markant for -->
+        <div class="nav__link2" data-drop="markant__for">
+          <div class="container">
+            <ul class="nav__drop-column">
+              <li class="nav__drop__menu">
+                <a href="#"
+                  ><span class="nav__drop__menu"
+                    >The Markant for national suppliers</span
+                  ></a
+                >
+              </li>
+              <li class="nav__drop__menu">
+                <a href="#"
+                  ><span class="nav__drop__menu"
+                    >The Markant for national retailers</span
+                  ></a
+                >
+              </li>
+              <li class="nav__drop__menu">
+                <a href="#"><span class="nav__drop__menu">Start-ups</span></a>
+              </li>
+            </ul>
+            <ul class="nav__drop-column">
+              <li class="nav__drop__menu">
+                <a href="#"
+                  ><span class="nav__drop__menu"
+                    >The Markant for international suppliers</span
+                  ></a
+                >
+              </li>
+              <li class="nav__drop__menu">
+                <a href="#"
+                  ><span class="nav__drop__menu"
+                    >The Markant for international retailers</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- about us -->
+        <div>
+          <span class="nav__linktext mobile__nav__link" data-mType="about__us">
+            About Us
+          </span>
+        </div>
+        <!-- mobile drop : about us-->
+        <div class="nav__link2" data-drop="about__us">
+          <div class="container">
+            <ul class="nav__drop-column">
+              <li class="nav__drop__menu">
+                <a href="#"
+                  ><span class="nav__drop__menu">Company Profile</span></a
+                >
+              </li>
+              <li class="nav__drop__menu">
+                <a href="#"><span class="nav__drop__menu">Partner</span></a>
+              </li>
+            </ul>
+            <ul class="nav__drop-column">
+              <li class="nav__drop__menu">
+                <a href="#"><span class="nav__drop__menu">Locations</span></a>
+              </li>
+              <li class="nav__drop__menu">
+                <a href="#"><span class="nav__drop__menu">History</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="https://markant.net/" class="header__link" target="_blank"
+          >markant.net</a
+        >
+        <ul class="language-menu__list">
+          <li class="language-menu__list">
+            <a href="#"
+              ><span class="language-menu__list"
+                >KR <i class="fa-sharp fa-solid fa-angle-down"></i></span
+            ></a>
+          </li>
+          <li class="language-menu__listItem">
+            <a href="#" class="language-menu__list"><span>EN</span></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
     <!-- main 1st -->
     <main class="content">
       <div class="container"></div>
@@ -233,8 +421,6 @@
           <div class="figures__item--figure">11</div>
           <p class="figure__item--text">locations worldwide</p>
         </li>
-      </ul>
-      <ul class="figures__content">
         <li class="figures__item">
           <div class="figures__item--figure">135</div>
           <p class="figure__item--text">
@@ -294,24 +480,34 @@
           <div class="nav-footer__wrapper">
             <p class="nav-footer__title">Markant Group</p>
             <nav class="nav-footer">
-              <a class="nav-footer__item" href="/en/about-us/company-profile"
+              <a
+                class="nav-footer__item"
+                href="https://www.markant.com/en/about-us/company-profile"
                 >Company profile</a
               >
               <a
                 class="nav-footer__item"
-                href="/en/our-services/the-markant-system-for-success"
+                href="https://www.markant.com/en/our-services/the-markant-system-for-success"
                 >System for success</a
               >
-              <a class="nav-footer__item" href="/en/about-us/locations"
+              <a
+                class="nav-footer__item"
+                href="https://www.markant.com/en/about-us/locations"
                 >Locations worldwide</a
               >
-              <a class="nav-footer__item" href="/en/about-us/partner"
+              <a
+                class="nav-footer__item"
+                href="https://www.markant.com/en/about-us/partner"
                 >Our partners</a
               >
-              <a class="nav-footer__item" href="/en/news-and-events/news"
+              <a
+                class="nav-footer__item"
+                href="https://www.markant.com/en/news-and-events/news"
                 >News</a
               >
-              <a class="nav-footer__item" href="/en/karriere/career-at-markant"
+              <a
+                class="nav-footer__item"
+                href="https://www.markant.com/en/karriere/career-at-markant"
                 >Career</a
               >
             </nav>
@@ -321,14 +517,16 @@
             <nav class="nav-footer">
               <a
                 class="nav-footer__item"
-                href="/en/markant-for/retailers/become-a-partner"
+                href="https://www.markant.com/en/markant-for/retailers/become-a-partner"
                 >Become a partner</a
               ><a
                 class="nav-footer__item"
-                href="/en/markant-for/suppliers/become-a-contract-supplier"
+                href="https://www.markant.com/en/markant-for/suppliers/become-a-contract-supplier"
                 >Become a contract supplier</a
               >
-              <a class="nav-footer__item" href="/en/news-and-events/news"
+              <a
+                class="nav-footer__item"
+                href="https://www.markant.com/en/news-and-events/news"
                 >Events</a
               >
             </nav>
@@ -354,13 +552,19 @@
         <div class="nav-meta-footer__row">
           <div class="nav-meta__wrapper">
             <nav class="nav-meta">
-              <a class="nav-meta__item" href="/en/legal-notice">Legal notice</a>
-              <a class="nav-meta__item" href="/en/privacy-policy"
+              <a
+                class="nav-meta__item"
+                href="https://www.markant.com/en/legal-notice"
+                >Legal notice</a
+              >
+              <a
+                class="nav-meta__item"
+                href="https://www.markant.com/en/privacy-policy"
                 >Privacy Policy</a
               >
               <a
                 class="nav-meta__item"
-                href="/en/privacy-policy"
+                href="https://www.markant.com/en/privacy-policy"
                 target="cookiemanModal"
                 >Cookie preferences</a
               >
