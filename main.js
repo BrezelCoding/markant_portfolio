@@ -1,48 +1,43 @@
 'use strict';
 
-/* Nav Drop */
-const nav = Array.from(document.querySelectorAll('.nav__linktext'));
+document.addEventListener('click', (event) => {
+  const navDrop = document.querySelectorAll('.nav__drop');
+  const mobileDrop = document.querySelector('.mobile__drop');
+  const navLink2 = document.querySelectorAll('.nav__link2');
 
-nav.forEach((link) => {
-  link.addEventListener('click', (event) => {
+  if (event.target.dataset.index) {
     const index = event.target.dataset.index;
-    const navDrop = document.querySelectorAll('.nav__drop');
-    navDrop.forEach((linkDrop) => {
-      if (index === linkDrop.dataset.type) {
-        linkDrop.classList.toggle('active');
+    navDrop.forEach((link) => {
+      if (index === link.dataset.type) {
+        link.classList.toggle('active');
       } else {
-        linkDrop.classList.remove('active');
+        link.classList.remove('active');
       }
     });
-  });
-});
-
-/* Nav Drop - Mobile */
-const toggleBtn = document.querySelector('.toggle__btn');
-const mobileDrop = document.querySelector('.mobile__drop');
-
-toggleBtn.addEventListener('click', () => {
-  mobileDrop.classList.toggle('invisible');
-});
-
-const mobileNavLink = Array.from(
-  document.querySelectorAll('.mobile__nav__link')
-);
-
-mobileNavLink.forEach((link) =>
-  link.addEventListener('click', (event) => {
+  } else if (event.target.dataset.mindex) {
+    const mIndex = event.target.dataset.mindex;
+    if (mIndex === mobileDrop.dataset.mtype) {
+      mobileDrop.classList.remove('invisible');
+    } else {
+      mobileDrop.classList.add('invisible');
+    }
+  } else if (event.target.dataset.mtype) {
     const mType = event.target.dataset.mtype;
-    const drop = document.querySelectorAll('.nav__link2');
-    drop.forEach((linkDrop) => {
-      if (mType === linkDrop.dataset.drop) {
-        linkDrop.classList.toggle('active');
-        mobileDrop.classList.remove('invisible');
+    navLink2.forEach((link) => {
+      if (mType === link.dataset.drop) {
+        console.log('aa');
+        link.classList.toggle('active');
       } else {
-        linkDrop.classList.remove('active');
+        link.classList.remove('active');
       }
     });
-  })
-);
+  } else {
+    navDrop.forEach((nav) => {
+      nav.classList.remove('active');
+    });
+    mobileDrop.classList.add('invisible');
+  }
+});
 
 /* Counter */
 const counterElements = document.querySelectorAll('.figures__item--figure');
