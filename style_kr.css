@@ -468,11 +468,11 @@ h1 {
   :root {
     /* Font Size */
     --font-largest: 70px;
-    --font-large: 45px;
-    --font-medium: 18px;
-    --font-regular: 15px;
-    --font-small: 14px;
-    --font-micro: 10px;
+    --font-large: 55px;
+    --font-medium: 48px;
+    --font-regular: 35px;
+    --font-small: 15px;
+    --font-micro: 12px;
   }
 
   .header.desktop {
@@ -688,10 +688,10 @@ h1 {
     /* Font Size */
     --font-largest: 50px;
     --font-large: 40px;
-    --font-medium: 15px;
-    --font-regular: 12px;
-    --font-small: 10px;
-    --font-micro: 8px;
+    --font-medium: 35px;
+    --font-regular: 22px;
+    --font-small: 15px;
+    --font-micro: 12px;
   }
 
   .header.desktop {
